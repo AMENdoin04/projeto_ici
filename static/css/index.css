@@ -1,0 +1,557 @@
+body{
+    /*background-image: linear-gradient(to left, rgb(51, 15, 182), rgb(219, 219, 219));*/
+    background-color: rgb(92, 92, 247);
+    margin: 0px;
+}
+
+*{
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Belanosima', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.conteiner_nav{
+    max-width: 1080px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    background-color: black;
+    width: 100%;
+    padding: 18px;
+}
+
+.sociais_nav{
+    width: 25%;
+}
+
+.menu_nav{
+    width: 50%;
+}
+
+.btn_menu_pri{
+    height: 35px;
+    border: none;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.btn_menu_pri:hover{
+    background-color: blue;
+    color: black;
+}
+
+.btn_menu_pri a{
+    color: white;
+    text-decoration: none;
+    padding-right: 30px;
+    font-size: 15px;
+    padding-left: 8px;
+}
+
+.btn_menu_pri:hover a{
+    color: black;
+}
+
+.sociais_nav button{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+}
+
+.sociais_nav button i{
+    font-size: 30px;
+}
+
+.logo_nav h1{
+    background: transparent;
+    color: white;
+    padding-right: 30px;
+    font-weight: bold;
+    margin: 0px 0px 0px 20px;
+}
+
+.menu_nav_mobile{
+    background-color: rgba(0, 0, 0, 0.507);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    height: 400%;
+    visibility: hidden;
+}
+
+.menu_nav_mobile nav a{
+    color: rgb(255, 255, 255);
+    text-align: none;
+    display: block;
+    padding: 20px 30px;
+    font-size: 16px;
+}
+
+.menu_nav_mobile nav a:hover{
+    background-color: rgba(0, 0, 0, 0.774);
+}
+
+.btn_nav_menu{
+    height: 40px; width: 40px;
+    border-radius: 8px;
+    border: 2px solid white;
+    background: transparent;
+    display: none;
+}
+
+.linha{
+    width: 28px; height: 2px;
+    background-color: white;
+    display: block;
+    margin: 5px auto;
+}
+
+section.slide{
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+.slide_content{
+    width: 400%;
+    height: auto;
+    display: flex;
+}
+
+.slide_content input{
+    display: none;
+}
+
+.slide_box{
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+    box-shadow: 0px 60px 0px black;
+}
+
+.slide_box img{
+    width: 100%;
+}
+
+.nav_manual, .nav_auto{
+    position: absolute;
+    width: 100%;
+    margin-top: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav_manual .manual_btn, .nav_auto div{
+    border: 1px solid rgb(0, 0, 85);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav_manual .manual_btn:not(:last-child), .nav_auto div:not(:last-child){
+    margin-right: 10px;
+}
+
+.nav_manual .manual_btn:hover{
+    background-color: rgb(0, 0, 85);
+}
+
+#slide_1:checked ~ .nav_auto .auto_btn_1{
+    background-color: rgb(0, 0, 85);
+}
+
+#slide_2:checked ~ .nav_auto .auto_btn_2{
+    background-color: rgb(0, 0, 85);
+}
+
+#slide_3:checked ~ .nav_auto .auto_btn_3{
+    background-color: rgb(0, 0, 85);
+}
+
+#slide_1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+
+#slide_2:checked ~ .primeiro{
+    margin-left: -25%;
+}
+
+#slide_3:checked ~ .primeiro{
+    margin-left: -50%;
+}
+
+.btn_eventos{
+    width: 240px; height: 60px;
+    background-color: blue;
+    color: white;
+    font-size: 40px;
+    border-radius: 20px;
+    border: none;
+    transform: translateX(300px) translateY(-120px);
+}
+
+/**/
+
+hr{
+    width: 80%;
+    height: 2px;
+    border: none;
+    background-color: black;
+}
+
+.space_carosel{
+    height: 10px;
+}
+
+.dizimos_palavra_da_semana{
+    width: 100%; height: 80vh;
+    /*background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(252, 0, 0));*/
+    background-color: rgb(92, 92, 247);
+    display: flex;
+}
+
+.div_palavra_da_semana{
+    width: 65%; height: 80vh;
+    padding: 30px;
+    text-indent: 60px;
+    border-right: 5px solid black;
+}
+
+.limite_palavra{
+    width: 80%;
+}
+
+h2.titulo_palavra_da_semana{
+    color: rgb(0, 34, 49);
+    font-size: 40px;
+    margin-top: 40px;
+    text-align: justify;
+}
+
+h2.palavra_da_semana{
+    text-align: justify;
+    color: rgb(1, 25, 71);
+    font-size: 30px;
+}
+
+.dizimos{
+    width: 35%; height: 80vh;
+    margin-left: 5%;
+}
+
+.carta_dizimos{
+    width: 90%; height: 90%;
+    background-color: rgb(236, 231, 231);
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 20px black;
+}
+
+.img_dizimos{
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.out_dizimos{
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.fa-hand-holding-dollar{
+    font-size: 160px;
+}
+
+.btn_dizimos{
+    width: 80%; height: 50%;
+    background-color: rgb(255, 44, 44);
+    border-radius: 20px;
+    border: none;
+    margin: 10px;
+    font-size: 30px;
+    color: white;
+    font-family: 'Belanosima', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn_dizimos:hover{
+    background-color: rgb(122, 15, 15);
+    color: rgb(161, 161, 161);
+    transition: 0.4s;
+}
+
+
+.cultos_semanais{
+    width: 100%; height: 40vh;
+    display: flex;
+}
+
+.domingo, .terca{
+    width: 33%;
+    height: 100%;
+}
+
+.quinta{
+    width: 34%;
+    height: 100%;
+}
+
+.domingo{
+    background-color:  rgb(92, 92, 247);
+}
+
+.domingo h1{
+    background-color: black;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+}
+
+.domingo h2{
+    color: rgb(0, 0, 0);
+}
+
+.cultos_semanais i, .cultos_semanais h1, .cultos_semanais h2, .cultos_semanais table, .cultos_semanais div{
+    text-align: center;
+}
+
+.domingo table{
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+
+.domingo button{
+    background-color: rgb(79, 255, 255);
+    width: 100px;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    transition: 0.3s;
+}
+
+.domingo button:hover{
+    background-color: rgb(54, 175, 175);
+}
+
+.terca{
+    background-color:  rgb(92, 92, 247);
+    border-left: 3px solid black;
+}
+
+.terca h1{
+    background-color: black;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+}
+
+.terca h2{
+    color: rgb(0, 0, 0);
+}
+
+.terca table{
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+
+.terca button{
+    background-color: rgb(79, 255, 255);
+    width: 100px;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    transition: 0.3s;
+}
+
+.terca button:hover{
+    background-color: rgb(54, 175, 175);
+}
+
+.quinta{
+    background-color:  rgb(92, 92, 247);
+    border-left: 3px solid black;
+}
+
+.quinta h1{
+    background-color: black;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+}
+
+.quinta h2{
+    color: rgb(0, 0, 0);
+}
+
+.quinta table{
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+
+.quinta button{
+    background-color: rgb(54, 175, 175);
+    width: 100px;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    transition: 0.3s;
+}
+
+.quinta button:hover{
+    background-color: rgb(54, 175, 175);
+}
+
+.domingo i{
+    font-size: 80px;
+}
+
+.terca i{
+    font-size: 80px;
+}
+
+.quinta i{
+    font-size: 80px;
+}
+
+@media screen and (max-width: 1080px) {
+    .menu_nav,.sociais_nav{
+        display: none;
+    }
+    
+    .logo_nav{
+        width: 100%;
+    }
+
+    .menu_nav_mobile.menu_mobile_ativo{
+        visibility: visible;
+    }
+
+    .btn_nav_menu{
+        display:block;
+    }
+
+    .nav_manual .manual_btn, .nav_auto div{
+        height: 5px; width: 5px;
+    }
+
+    .logo_nav_img{
+        display: none;
+    }
+
+    .dizimos_palavra_da_semana{
+        width: 100%; height: 120vh;
+    }
+
+    .fa-hand-holding-dollar{
+        font-size: 140px;
+    }
+
+    .dizimos_palavra_da_semana{
+        display: block;
+    }
+
+    .div_palavra_da_semana{
+        width: 100%;
+        height: 50%;
+        border: none;
+    }
+
+    .dizimos{
+        width: 80%;
+        height: 50%;
+        padding-left: 10%;
+    }
+}
+
+@media screen and (max-width: 630px) {
+
+    h2 .palavra_da_semana{
+        font-size: 30px;
+    }
+
+    .domingo, .terca{
+        width: 100%;
+        height: 33%;
+    }
+
+    .quinta{
+        width: 100%;
+        height: 34%;
+    }
+
+    .cultos_semanais{
+        height: 75vh;
+        display: block;
+    }
+
+    .terca{
+        border-left: none;
+        border-top: 3px solid black;
+    }
+
+    .quinta{
+        border-left: none;
+        border-top: 3px solid black;
+    }
+    
+    .domingo i{
+        display: none;
+    }
+
+    .terca i{
+        display: none;
+    }
+
+    .quinta i{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .fa-solid{
+        font-size: 100px;
+    }
+
+    .div_palavra_da_semana h2{
+        font-size: 30px;
+    }
+
+    h2.palavra_da_semana{
+        font-size: 20px;
+    }
+
+    .cultos_semanais{
+        height: 75vh;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .div_palavra_da_semana h2{
+        font-size: 20px;
+    }
+}

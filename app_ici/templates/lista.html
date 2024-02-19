@@ -1,0 +1,47 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IgrejaICI</title>
+    <link rel="stylesheet" href="{% static 'css/eventos.css' %}">
+</head>
+<body>
+    <h1 class="eventos_h1">Lista dos nossos futuros eventos</h1>
+    <div class="corredor_eventos">
+        {% for evento in eventos %}
+            <div class="carde_evento">
+                <div id="nome">
+                    <h1>{{evento.nome}}</h1>
+                </div>
+                <div id="dia">
+                    <h1>{{evento.data}}</h1>
+                </div>
+                <div id="pastor">
+                    <h1>{{evento.pregador}}</h1>
+                </div>
+                <div id="lugar">
+                    <h1>{{evento.local}}</h1>
+                </div>
+                <div id="img">
+                    <img src="{{evento.img.url}}" width="95%" height="95%">
+                </div>
+                <div id="sobre">
+                    <h1>{{evento.assunto}}</h1>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+<!--
+    {% for evento in eventos %}
+        {{evento.nome}}
+        {{evento.local}}
+        {{evento.data}}
+        {{evento.pregador}}
+        {{evento.assunto}}
+    {% endfor %}
+-->

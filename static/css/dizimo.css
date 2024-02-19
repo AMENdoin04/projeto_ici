@@ -1,0 +1,22 @@
+img {
+    width: 40%;
+}
+
+body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 730px){
+    body{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img{
+        width: 100%;
+    }
+}
