@@ -117,22 +117,7 @@ html {
     font-size: 25px;
 }
 
-#dias{
-    font-size: 80px;
-    text-align: end;
-}
-
-#horas{
-    font-size: 80px;
-    text-align: end;
-}
-
-#minutos{
-    font-size: 80px;
-    text-align: end;
-}
-
-#segundos{
+.hrs span, .mins span, .segs span, .days span{
     font-size: 80px;
     text-align: end;
 }
@@ -165,86 +150,76 @@ html {
 .creditos{
     border-top: 15px solid rgb(0, 0, 36);
     background-image: url("/static/img/creditos.jpg");
-    background-repeat: no-repeat;
     background-size:cover;
     background-position: center right;
-    width: 100%; height: 80vh;
+    width: 100%; height: 90vh;
+    display: grid;
+    grid-template-areas: 
+    'atalhos redes'
+    'atalhos miguel'
+    'rua rua';
 }
 
-.links_crd{
-    background-color: #332080;
+.creditos div{
+    background-color: #04043f;
+    color: rgb(255, 255, 255);
     border-radius: 20px;
-    margin: 10px;
-    width: 70%; height: auto;
+    margin: 25px;
+}
+
+
+
+a{text-decoration: none;}
+
+
+.atalhos_by a {
+    color: #ffff;
+}
+
+.miguel_by, .redes_by{
+    margin: 50%;
+    font-size: 20px;
     text-align: center;
-}
-
-.links_crd a{
-    color: black;
-    font-size: 25px;
-    text-decoration: none;
-    padding: 20px;
-}
-
-.rua_crt{
-    margin: 10px;
-    border-radius: 20px;
-    width: 70%; height: min-content;
-    background-color: #725BCD;
-}
-
-.rua_crt h1{
-    color: #020239;
-    font-size: 25px;
-    padding: 20px;
-}
-
-.redes_by{
-    margin: 10px;
-    border-radius: 20px;
-    border: 0px;
-    width: 70%; height: 30%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.redes_by table{
-    background-color: #040440;
-    width: 29%; height: 100%;
-    border-radius: 20px;
-    padding-left: -300px;
+.miguel_by a, .redes_by a{
+    font-size: 70px;
+    border: 30px;
+    color: rgb(255, 255, 255);
 }
 
-.redes_by td{
-    width: 50%; height: 50%;
-    border-radius: 20px;
+.rua_by h1{
+    font-size: 25px;
+    margin: 20px;
 }
 
-.redes_by i{
-    color: black;
-    font-size: 65px;
-    padding-left: 30%;
-}
-
-.by{
-    width: 69%; height: 100%;
-    background-color: #03032B;
-    border-radius: 20px;
-    margin-left: 2%;
-}
-
-.by h1{
-    text-align: center;
-    font-size: 30px;
-}
-
-.by i{
-    font-size: 100px;
-    text-align: center;
-    padding-left: 45%;
+.atalhos_by{
+    grid-area: atalhos;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
 }
 
 .redes_by{
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    grid-area: redes;
+}
+
+.rua_by{
+    grid-area: rua;
+}
+
+.miguel_by{
+    grid-area: miguel;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 @media screen and (max-width: 1080px) {
@@ -281,18 +256,6 @@ html {
     .btn_local{
         width: 90%; height: 80%;
     }
-
-    .redes_by i{
-        font-size: 50px;
-    }
-
-    .by h1{
-        font-size: 25px;
-    }
-    
-    .by i{
-        font-size: 80px;
-    }
 }
 
 @media screen and (max-width: 690px) {
@@ -320,38 +283,23 @@ html {
         padding: 20px;
     }
 
-    .redes_by{
+    .creditos{
+        grid-template-areas: 
+        'atalhos miguel'
+        'redes redes'
+        'rua rua';
+    }
+
+    .creditos div{
         margin: 10px;
-        border-radius: 20px;
-        width: 80%; height: 25%;
-        display: flex;
     }
 
-    .redes_by table{
-        background-color: #040440;
-        width: 39%; height: 100%;
-        border-radius: 20px;
-    }
-
-    .redes_by i{
-        color: black;
-        font-size: 45px;
-        padding-left: 30%;
-    }
-
-    .by{
-        width: 60%;
-    }
-
-    .by h1{
-        text-align: center;
+    .creditos div h1{
         font-size: 20px;
     }
 
-    .by i{
-        font-size: 60px;
-        text-align: center;
-        padding-left: 15px;
+    .atalhos_by{
+        font-size: 20px;
     }
 }
 
@@ -360,62 +308,34 @@ html {
     .relogio{
         height: 50%;
     }
-
-    .hrs, .mins, .segs, .days{
-        padding-top: 15px;
-    }
-
-    #dias{
-        font-size: 60px;
-    }
-    
-    #horas{
-        font-size: 60px;
-    }
-    
-    #minutos{
-        font-size: 60px;
-    }
-    
-    #segundos{
-        font-size: 60px;
-    }
 }
 
 @media screen and (max-width: 540px) {
     .hrs, .mins, .segs, .days{
         font-size: 17px;
     }
+
+    .hrs span, .mins span, .segs span, .days span{
+        font-size: 65px;
+    }
+    
+    .redes_by a{
+        font-size: 35px;
+    }
 }
 
-@media screen and (max-width: 380px) {
-
-    .hrs, .mins, .segs, .days{
-        padding-top: 15px;
-        font-size: 15px;
+@media screen and (max-width: 420px) {
+    .hrs span, .mins span, .segs span, .days span{
+        font-size: 48px;
     }
-
-
-
+}
+@media screen and (max-width: 380px) {
     .rua_crt {
         width: 90%;
     }
 
-    .redes_by{
-        width: 90%; height: 35%;
-        display: block;
-    }
-    
-    .redes_by table{
-        width: 100%; height: 50%;
-    }
-
-    .by{
-        margin-top: 10px;
-        width: 100%; height: 35%;
-    }
-    
-    .by i{
-        font-size: 30px;
+    .hrs span, .mins span, .segs span, .days span{
+        font-size: 40px;
+        text-align: end;
     }
 }

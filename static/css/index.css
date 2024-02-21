@@ -202,16 +202,15 @@ section.slide{
     font-size: 40px;
     border-radius: 20px;
     border: none;
-    transform: translateX(300px) translateY(-120px);
+    transform: translateX(-160%) translateY(-200%);
 }
 
 /**/
 
 hr{
-    width: 80%;
-    height: 2px;
     border: none;
     background-color: black;
+    height: 4px
 }
 
 .space_carosel{
@@ -439,6 +438,12 @@ h2.palavra_da_semana{
 }
 
 @media screen and (max-width: 1080px) {
+
+    .btn_eventos{
+        width: 200px; height: 50px;
+        font-size: 35px;
+    }
+
     .menu_nav,.sociais_nav{
         display: none;
     }
@@ -488,7 +493,21 @@ h2.palavra_da_semana{
     }
 }
 
+@media screen and (max-width: 830px){
+    .btn_eventos{
+        width: 180px; height: 45px;
+        font-size: 30px;
+        transform: translateX(-210px) translateY(-80px);
+    }
+}
+
 @media screen and (max-width: 630px) {
+
+    .btn_eventos{
+        width: 150px; height: 35px;
+        font-size: 20px;
+        transform: translateX(-140px) translateY(-50px);
+    }
 
     h2 .palavra_da_semana{
         font-size: 30px;
@@ -533,6 +552,13 @@ h2.palavra_da_semana{
 }
 
 @media screen and (max-width: 460px) {
+
+    .btn_eventos{
+        width: 90px; height: 25px;
+        font-size: 10px;
+        transform: translateX(-90px) translateY(-40px);
+    }
+
     .fa-solid{
         font-size: 100px;
     }

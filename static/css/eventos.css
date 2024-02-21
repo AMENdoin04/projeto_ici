@@ -85,11 +85,21 @@ h1{
     .carde_evento{
         width: 96%; height: auto;
         grid-template-areas: 
-        'nome nome nome nome'
-        'dia dia dia dia'
-        'pregador pregador pregador pregador'
-        'local local local local'
-        'img img img img'
-        'sobre sobre sobre sobre';
+        'nome'
+        'dia'
+        'pregador'
+        'local'
+        'img'
+        'sobre';
+    }
+    
+    #img{
+        grid-area: img;
+        height: 50vh;
+    }
+
+    #sobre{
+        grid-area: sobre;
+        height: 20vh;
     }
 }

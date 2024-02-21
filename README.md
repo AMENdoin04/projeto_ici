@@ -15,6 +15,8 @@
 
     2 REGRA: APÓS A EXECUSÃO DA PRIMEIRA REGRA SÓ PRECISA CELECIONAR OUTRA IMAGEM
 
+    3 REGRA: A IMGEM DEVE TER O TAMANHO DE 1920x740
+
 
 #%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%%#%#%%#%#%#%%#%#%#%%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%
                                                     LIVES
