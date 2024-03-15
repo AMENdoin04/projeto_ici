@@ -1,0 +1,222 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>igrejaICI</title>
+    <link rel="stylesheet" href="{%static 'css/index.css' %}">
+    <link rel="stylesheet" href="{%static 'css/index(1).css' %}">
+    {% for prox_live in proxs_lives %}
+        <script src="{%static 'js/relogio.js' %}" defer data-live="{{prox_live.proxs_lives}}"></script>
+    {% endfor %}
+    <script src="{%static 'js/animação.js' %}" defer data-live="{{prox_live.proxs_lives}}"></script>
+    <script src="{%static 'js/slide.js' %}" defer data-live="{{prox_live.proxs_lives}}"></script>
+    <script src="https://kit.fontawesome.com/3f61646e14.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@600&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="conteiner_nav" id="eventos">
+            <div class="logo_nav_img activate"><img src="/static/img/logo_igreja.png" width="50"></div>
+            <div class="logo_nav activate"><h1>Igreja ICI</h1></div>
+            <div class="menu_nav">
+                <nav>
+                    <button class="btn_menu_pri activate"><a href="#palavra_da_semana">Palavra</a></button>
+                    <button class="btn_menu_pri activate"><a href="#dizimo">Dizimos</a></button>
+                    <button class="btn_menu_pri activate"><a href="#cultos">Cultos</a></button>
+                    <button class="btn_menu_pri activate"><a href="#sobre">Nós</a></button>
+                    <button class="btn_menu_pri activate"><a href="#local">Local</a></button>
+                    <button class="btn_menu_pri activate"><a href="#live">Live</a></button>
+                </nav>
+            </div>
+
+            <button class="btn_nav_menu" onclick="animarMenu()" id="btn_menu_nav">
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="linha"></span>
+            </button>
+
+            <div class="sociais_nav">
+                <a href="https://www.instagram.com/igrejaici/" target="_blank"><button class=" activate_rigth"><i class="fa-brands fa-instagram"></i></button></a>
+                <a href="https://www.facebook.com/icp.itanhaem" target="_blank"><button class=" activate_rigth"><i class="fa-brands fa-square-facebook"></i></button></a>
+                <a href="https://www.youtube.com/@igrejaici" target="_blank"><button class=" activate_rigth"><i class="fa-brands fa-youtube"></i></button></a>
+                <a href="https://www.tiktok.com/@igrejaici?_t=8gDXbjto14A&_r=1" target="_blank"><button class=" activate_rigth"><i class="fa-brands fa-tiktok"></i></button></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="slide">
+        <div class="slide_content">
+            <input type="radio" name="btn_slide" id="slide_1">
+            <input type="radio" name="btn_slide" id="slide_2">
+            <input type="radio" name="btn_slide" id="slide_3">
+            
+            <div class="slide_box primeiro">
+                <img src="{{pri}}" width="100%">
+                <form action="{% url 'eventos_list' %}">
+                    <button class="btn_eventos">eventos</button>
+                </form>
+            </div>
+            
+            <div class="slide_box">
+                <img src="{{seg}}">
+            </div>
+
+            <div class="slide_box">
+                <img src="{{ter}}">
+            </div>
+            
+            <div class="nav_auto">
+                <div class="auto_btn_1"></div>
+                <div class="auto_btn_2"></div>
+                <div class="auto_btn_3"></div>
+            </div>
+
+            <div class="nav_manual">
+                <label for="slide_1" class="manual_btn"></label>
+                <label for="slide_2" class="manual_btn"></label>
+                <label for="slide_3" class="manual_btn"></label>
+            </div>
+        </div>
+    </section>
+
+    <div class="menu_nav_mobile activate" id="menu_nav_mobile">
+        <nav>
+            <a href="#palavra_da_semana">palavra_da_semana</a>
+            <a href="#dizimo">Dizimos</a>
+            <a href="#cultos">Cultos</a>
+            <a href="#sobre">Nós</a>
+            <a href="#local">Local</a>
+            <a href="https://www.instagram.com/igrejaici/" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/icp.itanhaem" target="_blank">Facebook</a>
+            <a href="https://www.youtube.com/@igrejaici" target="_blank">Youtube</a>
+            <a href="https://www.tiktok.com/@igrejaici?_t=8gDXbjto14A&_r=1" target="_blank">TikTok</a>
+        </nav>
+    </div>
+
+    <div class="space_carosel"></div>
+
+    <section class="dizimos_palavra_da_semana">
+        <div class="div_palavra_da_semana activate" id="palavra_da_semana">
+            <div class="limite_palavra">
+                <h2 class="titulo_palavra_da_semana">Palavra da semana</h2>
+                <br>
+                {% for versiculo in versiculos %}
+                    <h2 class="palavra_da_semana">{{versiculo.versiculo}}</h2>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="dizimos activate_rigth" id="dizimo">
+            <img src="../static/img/coraçãozinho.png">
+            <h2 class="text_dizimos">CLIQUE AQUI PARA</h2>
+            <form action="{% url 'dizimos_page' %}">
+                <button class="btn_dizimos">DÍZIMOS E OFERTAS</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="cultos_semanais" id="cultos">
+        <div class="domingo">
+            <img src="../static/img/3021797.png" width="90px">
+            <h1>DOMINGO:</h1>
+            <h2>Culto da familha</h2>
+            <table>
+                <tr>
+                    <td><h2>hora:</h2></td>
+                    <td><h2>18:30 h</h2></td>
+                </tr>
+            </table>
+        </div>
+        <div class="terca">
+            <img src="../static/img/2663051.png" width="90px">
+            <h1>TERÇA:</h1>
+            <h2>Culto dos obreiros</h2>
+            <table>
+                <tr>
+                    <td><h2>hora:</h2></td>
+                    <td><h2>20 h</h2></td>
+                </tr>
+            </table>
+        </div>
+        <div class="quinta">
+            <img src="../static/img/2651111.png" width="90px">
+            <h1>QUINTA:</h1>
+            <h2>Culto de ensino</h2>
+            <table>
+                <tr>
+                    <td><h2>hora:</h2></td>
+                    <td><h2>20 h</h2></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+    <section class="lives" id="live">
+        <h1>lives da igreja</h1>
+        <br>
+        <h1>proxima live começa em...</h1>
+        <div class="relogio">
+            <div class="days">
+                <span id="dias">00</span>
+                <span>:</span>
+            </div>
+            <div class="hrs">
+                <span id="horas">00</span>
+                <span>:</span>
+            </div>
+            <div class="mins">
+                <span id="minutos">00</span>
+                <span>:</span>
+            </div>
+            <div class="segs">
+                <span id="segundos">00</span>
+            </div>
+        </div>
+        <a class="button_live" href="https://www.facebook.com/icp.itanhaem" target="_blank"><button class="live_you">no FaceBook</button></a>
+    </section>
+
+    <section class="local_sobre">
+        <div class="local" id="local">
+            <h1>LOCALIZAÇÃO</h1>
+            <div class="coluna_local">
+                <img src="../static/img/CULTOSANTACEIA_2.jpg" width="230">
+                <button>Clique aqui para localização</button>
+                <h1>Rua Cardeal Mota, 573, Suarão - Itanhém/SP</h1>
+            </div>
+        </div>
+        <div class="sobre" id="sobre">
+            <div class="txt_sobre">
+                <h1>SOBRE NÓS</h1>
+                <br>
+                <h1 class="cont">slasa sdadt gfui hbAUIFgbBFUV UGFVui gvuigavfi ugvi uGV FIUG veui fgvi ugvfa iuvfui gvau ifgviu gvugVUY VFUIAGVIUGE FAVI UGVAUIG VIUGAVUIG AUGVAUGV IUAGEVF UGAVUI VAUG</h1>
+            </div>       
+         </div>
+    </section>
+
+    <section class="creditos">
+        <div class="atalhos_by">
+            <a href="#eventos">Eventos</a><br>
+            <a href="#palavra_da_semana">Palavra</a><br>
+            <a href="#dizimo">Dízimos</a><br>
+            <a href="#cultos">Cultos</a><br>
+            <a href="#sobre">Nós</a><br>
+            <a href="#live">Lives</a><br>
+            <a href="#local">Local</a>
+        </div>
+        <div class="redes_by">
+            <a href="https://www.instagram.com/igrejaici/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/icp.itanhaem" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.youtube.com/@igrejaici" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@igrejaici?_t=8gDXbjto14A&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <div class="miguel_by">
+            <a href="https://www.instagram.com/mingu3l.zz/" target="_blank"><i class="fa-brands fa-instagram"></i></a></h1>
+            <h1>By: Miguel Augusto da Silva</h1></div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IgrejaICI</title>
+    <script src="https://kit.fontawesome.com/3f61646e14.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{%static 'css/dizimo.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@600&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <div class="lado_1_0">
+            <div class="btn_voltar">
+                <form action="{% url 'index' %}">
+                    <button><i class="fa-solid fa-arrow-left"></i></button>
+                </form>
+            </div>
+            <div class="lado_1">
+                <img src="{% static 'img/logo_dizimo.jpg' %}">
+                <h1>Para queles que querem dizimar e ofertar dessa forma</h1>
+            </div>
+        </div>
+        <hr>
+
+        <div class="lado_2">
+            <div class="banco">
+                <h1>Banco Santander</h1>
+                <br>
+                <h2>AG: 0549</h2>
+                <h2>Cc: 13.003864-5</h2>
+            </div>
+            <div class="pix">
+                <h1>Pix</h1>
+                <br>
+                <h2>35710164000197</h2>
+                <h2>Igreja de Cristo</h2>
+                <h2>Bco Santander</h2>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -5,69 +5,73 @@ html {
 .local_sobre{
     width: 100%; height: 80vh;
     display: flex;
+    background-color: #2836a1;
+}
+
+.local, .sobre{
+    margin: auto;
+    width: 50%; height: 80%;
+    animation: ScrollReveal ease;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
 }
 
 .local{
-    width: 50%; height: 100%;
-    border-right: 5px solid black;
+    border-right: 5px solid rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.txt_local{
+.local h1{
     width: 100%; height: 10%;
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
     text-align: center;
 }
 
-.fa-location-dot{
-    font-size: 270px;
-}
-
-.btn_local{
-    width: 90%; height: 90%;
-    background-color: aqua;
-    border-radius: 20px;
-    border: none;
-    margin: 5%;
-    transition: 0.2s;
-}
-
-.btn_local:hover{
-    background-color: rgb(27, 88, 88);
-}
-
-.inf_local{
-    width: 100%; height: 90%;
+.coluna_local{
+    width: 300px; height: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.img_local{
-    width: 50%; height: 100%;
-}
-
-.img_local img{
-    margin: 5%;
-    width: 90%; height: 90%;
+.coluna_local img{
     border-radius: 20px;
-    box-shadow: 0px 15px 20px black;
 }
 
-.rua_local{
-    width: 50%; height: 100%;
+.coluna_local button{
+    width: 180px; height: 40px;
+    border: none;
+    background-color: #131a52;
+    color: white;
+    border-radius: 20px;
+    transform: translateY(-20px);
+}
+
+.coluna_local h1{
+    font-size: 20px;
+    color: white;
+
 }
 
 .sobre{
-    width: 50%; height: 100%;
+    width: 50%; height: 80%;
 }
 
 .sobre h1{
-    color:  rgb(0, 0, 0);
+    font-weight: bold;
+    color: white;
     font-size: 30px;
     text-align: justify;
     overflow: auto;
 }
 
 .sobre .cont{
-    color:  rgb(0, 0, 0);
+    color: white;
     font-size: 20px;
     text-align: justify;
 }
@@ -81,21 +85,12 @@ html {
     text-align: center;
 }
 
-.txt_sobre .cont{
-    text-indent: 60px;
-}
-
-.local_sobre, .cultos_semanais, .dizimos_palavra_da_semana, .lives{
-    margin-bottom: 70px;
-}
-
 .lives{
-    background-color: #03032B;
+    background-color: #ffffff;
     width: 100%; height: 60vh;
     font-size: 15px;
-    color: #725BCD;
+    color: #2836a1;
     text-align: center;
-    border: 10px solid #010118;
 }
 
 .relogio{
@@ -109,10 +104,18 @@ html {
     width: 250px;
 }
 
+.live_you{
+    background-color: #2836a1;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    border: none;
+}
+
 .hrs, .mins, .segs, .days{
     width: 20%; height: 90%;
     background-color: rgb(0, 0, 0);
-    color: #725BCD;
+    color: #2836a1;
     padding-top: 20px;
     font-size: 25px;
 }
@@ -122,55 +125,27 @@ html {
     text-align: end;
 }
 
-.live_you{
-    background-color: #010118;
-    border-radius: 10px;
-    color: rgb(255, 255, 255);
-    width: 10%;
-    height: 10%;
-    font-size: 20px;
-    border: none;
-}
-
 .live_you:hover{
     background-color: black;
 }
 
-.grupos{
-    background-color: rgb(92, 92, 247);
-    width: 100%; height: 35vh;
-}
-
-.grupos h1{
-    color: white;
-    font-size: 40px;
-    text-align: center;
-}
-
 .creditos{
-    border-top: 15px solid rgb(0, 0, 36);
-    background-image: url("/static/img/creditos.jpg");
-    background-size:cover;
-    background-position: center right;
+    background-color: white;
     width: 100%; height: 90vh;
     display: grid;
     grid-template-areas: 
     'atalhos redes'
     'atalhos miguel'
-    'rua rua';
 }
 
 .creditos div{
-    background-color: #04043f;
+    background-color: #2836a1;
     color: rgb(255, 255, 255);
     border-radius: 20px;
-    margin: 25px;
+    margin: 50px;
 }
 
-
-
 a{text-decoration: none;}
-
 
 .atalhos_by a {
     color: #ffff;
@@ -191,80 +166,88 @@ a{text-decoration: none;}
     color: rgb(255, 255, 255);
 }
 
-.rua_by h1{
-    font-size: 25px;
-    margin: 20px;
-}
-
 .atalhos_by{
     grid-area: atalhos;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-size: 20px;
 }
-
 .redes_by{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     grid-area: redes;
-}
-
-.rua_by{
-    grid-area: rua;
 }
 
 .miguel_by{
     grid-area: miguel;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.miguel_by i{
+    margin-right: 30px;
 }
 
 @media screen and (max-width: 1080px) {
     .local_sobre{
         display: block;
-        height: 100vh;
+        height: 120vh;
     }
 
     .local{
-        width: 100%; height: 50%;
+        width: 100%; height: 500px;
         border-right: none;
+        position: relative;
+        top: 30px;
     }
 
     .sobre{
         width: 100%; height: 50%;
     }
 
-    .txt_local{
-        font-size: 20px;
-    }
-
-    .inf_local{
-        height: 100%;
-    }
-
-    .local i{
-        font-size: 200px;
-    }
-
     .img_local img{
         width: 90%; height: 80%;
     }
+}
 
-    .btn_local{
-        width: 90%; height: 80%;
+@media screen and (max-width: 940px) {
+    .creditos{
+        grid-template-areas: 
+        'atalhos atalhos'
+        'miguel miguel'
+        'redes redes'
+    }
+    
+    .creditos .miguel_by, .creditos .redes_by{
+        margin: 10px 40px 10px 40px;
+    }
+
+    .creditos .atalhos_by{
+        margin: 40px 40px 10px 40px;
+        font-size: 15px;
+    }
+
+    .creditos div h1{
+        font-size: 20px;
+    }
+
+    .miguel_by a{
+        font-size: 30px;
+    }
+
+    .redes_by a{
+        font-size: 50px;
     }
 }
 
 @media screen and (max-width: 690px) {
     .local i{
         font-size: 150px;
-    }
-
-    .txt_local{
-        font-size: 17px;
     }
 
     .relogio{
@@ -275,31 +258,6 @@ a{text-decoration: none;}
         width: 25%; height: 90%;
         padding-top: 20px;
         font-size: 25px;
-    }
-
-    .rua_crt h1{
-        color: #020239;
-        font-size: 20px;
-        padding: 20px;
-    }
-
-    .creditos{
-        grid-template-areas: 
-        'atalhos miguel'
-        'redes redes'
-        'rua rua';
-    }
-
-    .creditos div{
-        margin: 10px;
-    }
-
-    .creditos div h1{
-        font-size: 20px;
-    }
-
-    .atalhos_by{
-        font-size: 20px;
     }
 }
 
@@ -319,20 +277,22 @@ a{text-decoration: none;}
         font-size: 65px;
     }
     
+    .miguel_by a {
+        font-size: 30px;
+        margin: 0px 0px 0px 20px;
+    }
+
     .redes_by a{
-        font-size: 35px;
+        font-size: 40px;
     }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
     .hrs span, .mins span, .segs span, .days span{
         font-size: 48px;
     }
 }
 @media screen and (max-width: 380px) {
-    .rua_crt {
-        width: 90%;
-    }
 
     .hrs span, .mins span, .segs span, .days span{
         font-size: 40px;

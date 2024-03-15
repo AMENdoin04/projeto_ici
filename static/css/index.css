@@ -1,28 +1,26 @@
 body{
-    /*background-image: linear-gradient(to left, rgb(51, 15, 182), rgb(219, 219, 219));*/
-    background-color: rgb(92, 92, 247);
+    background-color: rgb(255, 255, 255);
     margin: 0px;
 }
 
 *{
-    font-weight: bold;
+    font-weight: bolder;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Belanosima', sans-serif;
     font-family: 'Poppins', sans-serif;
 }
-
 
 .conteiner_nav{
     max-width: 1080px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0px;
 }
 
 header{
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     width: 100%;
     padding: 18px;
 }
@@ -38,41 +36,39 @@ header{
 .btn_menu_pri{
     height: 35px;
     border: none;
-    background-color: black;
     border-radius: 10px;
+    background-color: white;
 }
 
 .btn_menu_pri:hover{
-    background-color: blue;
+    background-color: #2836a1;
     color: black;
 }
 
 .btn_menu_pri a{
-    color: white;
+    color: black;
     text-decoration: none;
     padding-right: 30px;
     font-size: 15px;
     padding-left: 8px;
 }
 
-.btn_menu_pri:hover a{
-    color: black;
-}
-
 .sociais_nav button{
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
     border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #2836a1;
 }
 
 .sociais_nav button i{
-    font-size: 30px;
+    font-size: 40px;
+    color: #ffffff;
 }
 
 .logo_nav h1{
     background: transparent;
-    color: white;
+    color: rgb(0, 0, 0);
     padding-right: 30px;
     font-weight: bold;
     margin: 0px 0px 0px 20px;
@@ -84,9 +80,10 @@ header{
     position: absolute;
     top: 85px;
     left: 0;
-    width: 100%;
-    height: 400%;
     visibility: hidden;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s;
 }
 
 .menu_nav_mobile nav a{
@@ -104,14 +101,14 @@ header{
 .btn_nav_menu{
     height: 40px; width: 40px;
     border-radius: 8px;
-    border: 2px solid white;
+    border: 2px solid #2836a1;
     background: transparent;
     display: none;
 }
 
 .linha{
     width: 28px; height: 2px;
-    background-color: white;
+    background-color: #2836a1;
     display: block;
     margin: 5px auto;
 }
@@ -156,7 +153,7 @@ section.slide{
 }
 
 .nav_manual .manual_btn, .nav_auto div{
-    border: 1px solid rgb(0, 0, 85);
+    border: 1px solid #2836a1;
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
@@ -168,19 +165,19 @@ section.slide{
 }
 
 .nav_manual .manual_btn:hover{
-    background-color: rgb(0, 0, 85);
+    background-color: #2836a1;
 }
 
 #slide_1:checked ~ .nav_auto .auto_btn_1{
-    background-color: rgb(0, 0, 85);
+    background-color: #2836a1;
 }
 
 #slide_2:checked ~ .nav_auto .auto_btn_2{
-    background-color: rgb(0, 0, 85);
+    background-color: #2836a1;
 }
 
 #slide_3:checked ~ .nav_auto .auto_btn_3{
-    background-color: rgb(0, 0, 85);
+    background-color: #2836a1;
 }
 
 #slide_1:checked ~ .primeiro{
@@ -197,7 +194,7 @@ section.slide{
 
 .btn_eventos{
     width: 240px; height: 60px;
-    background-color: blue;
+    background-color: #2836a1;
     color: white;
     font-size: 40px;
     border-radius: 20px;
@@ -205,30 +202,20 @@ section.slide{
     transform: translateX(-160%) translateY(-200%);
 }
 
-/**/
-
-hr{
-    border: none;
-    background-color: black;
-    height: 4px
-}
-
 .space_carosel{
     height: 10px;
 }
 
 .dizimos_palavra_da_semana{
+    margin-bottom: 70px;
     width: 100%; height: 80vh;
-    /*background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(252, 0, 0));*/
-    background-color: rgb(92, 92, 247);
     display: flex;
 }
 
 .div_palavra_da_semana{
     width: 65%; height: 80vh;
-    padding: 30px;
-    text-indent: 60px;
     border-right: 5px solid black;
+    padding: 90px;
 }
 
 .limite_palavra{
@@ -237,7 +224,7 @@ hr{
 
 h2.titulo_palavra_da_semana{
     color: rgb(0, 34, 49);
-    font-size: 40px;
+    font-size: 35px;
     margin-top: 40px;
     text-align: justify;
 }
@@ -245,196 +232,106 @@ h2.titulo_palavra_da_semana{
 h2.palavra_da_semana{
     text-align: justify;
     color: rgb(1, 25, 71);
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .dizimos{
     width: 35%; height: 80vh;
-    margin-left: 5%;
-}
-
-.carta_dizimos{
-    width: 90%; height: 90%;
-    background-color: rgb(236, 231, 231);
-    border-radius: 10%;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 15px 20px black;
-}
-
-.img_dizimos{
-    height: 50%;
-    width: 100%;
+    justify-content: center;
     text-align: center;
-    padding-top: 60px;
+    color: black;
+    font-size: 25px;
 }
 
-.out_dizimos{
-    height: 50%;
-    width: 100%;
-    text-align: center;
-    padding-top: 40px;
-}
-
-.fa-hand-holding-dollar{
-    font-size: 160px;
+.dizimos img{
+    height: 150px;
+    width: 150px;
+    margin: auto;
 }
 
 .btn_dizimos{
-    width: 80%; height: 50%;
-    background-color: rgb(255, 44, 44);
-    border-radius: 20px;
+    width: 240px; height: 50px;
+    background-color: #2836a1;
+    border-radius: 25px;
     border: none;
-    margin: 10px;
-    font-size: 30px;
+    font-size: 20px;
     color: white;
-    font-family: 'Belanosima', sans-serif;
     font-family: 'Poppins', sans-serif;
+    margin-bottom: 150px;
+    font-weight: 900;
+}
+
+@keyframes ScrollReveal {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
 }
 
 .btn_dizimos:hover{
-    background-color: rgb(122, 15, 15);
-    color: rgb(161, 161, 161);
+    background-color: #161e5a;
+    color: rgb(255, 255, 255);
     transition: 0.4s;
 }
 
 
 .cultos_semanais{
-    width: 100%; height: 40vh;
+    width: 100%; height: 60vh;
     display: flex;
+    background-color:  #2836a1;
+    justify-content: center;
+}
+
+.cultos_semanais div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    animation: ScrollReveal ease;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
 }
 
 .domingo, .terca{
     width: 33%;
     height: 100%;
+    background-color:  #2836a1;
+}
+
+.domingo h1{
+    font-weight:900;
+    font-size: 40px;
+}
+
+.cultos_semanais div{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+.terca h1{
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .quinta{
     width: 34%;
     height: 100%;
-}
-
-.domingo{
-    background-color:  rgb(92, 92, 247);
-}
-
-.domingo h1{
-    background-color: black;
-    text-transform: uppercase;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 40px;
-}
-
-.domingo h2{
-    color: rgb(0, 0, 0);
-}
-
-.cultos_semanais i, .cultos_semanais h1, .cultos_semanais h2, .cultos_semanais table, .cultos_semanais div{
-    text-align: center;
-}
-
-.domingo table{
-    width: 100%;
-    color: black;
-    text-align: center;
-}
-
-.domingo button{
-    background-color: rgb(79, 255, 255);
-    width: 100px;
-    font-size: 15px;
-    border-radius: 20px;
-    border: none;
-    transition: 0.3s;
-}
-
-.domingo button:hover{
-    background-color: rgb(54, 175, 175);
-}
-
-.terca{
-    background-color:  rgb(92, 92, 247);
-    border-left: 3px solid black;
-}
-
-.terca h1{
-    background-color: black;
-    text-transform: uppercase;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 40px;
-}
-
-.terca h2{
-    color: rgb(0, 0, 0);
-}
-
-.terca table{
-    width: 100%;
-    color: black;
-    text-align: center;
-}
-
-.terca button{
-    background-color: rgb(79, 255, 255);
-    width: 100px;
-    font-size: 15px;
-    border-radius: 20px;
-    border: none;
-    transition: 0.3s;
-}
-
-.terca button:hover{
-    background-color: rgb(54, 175, 175);
-}
-
-.quinta{
-    background-color:  rgb(92, 92, 247);
-    border-left: 3px solid black;
+    background-color:  #2836a1;
 }
 
 .quinta h1{
-    background-color: black;
-    text-transform: uppercase;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-weight: 900;
     font-size: 40px;
-}
-
-.quinta h2{
-    color: rgb(0, 0, 0);
-}
-
-.quinta table{
-    width: 100%;
-    color: black;
-    text-align: center;
-}
-
-.quinta button{
-    background-color: rgb(54, 175, 175);
-    width: 100px;
-    font-size: 15px;
-    border-radius: 20px;
-    border: none;
-    transition: 0.3s;
-}
-
-.quinta button:hover{
-    background-color: rgb(54, 175, 175);
-}
-
-.domingo i{
-    font-size: 80px;
-}
-
-.terca i{
-    font-size: 80px;
-}
-
-.quinta i{
-    font-size: 80px;
 }
 
 @media screen and (max-width: 1080px) {
@@ -454,6 +351,8 @@ h2.palavra_da_semana{
 
     .menu_nav_mobile.menu_mobile_ativo{
         visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
     }
 
     .btn_nav_menu{
@@ -469,27 +368,30 @@ h2.palavra_da_semana{
     }
 
     .dizimos_palavra_da_semana{
-        width: 100%; height: 120vh;
-    }
-
-    .fa-hand-holding-dollar{
-        font-size: 140px;
-    }
-
-    .dizimos_palavra_da_semana{
+        margin: 0px;
+        width: 100%; height: 100vh;
         display: block;
     }
 
+    h2.palavra_da_semana{
+        font-size: 20px;
+    }
+
     .div_palavra_da_semana{
+        border: none;
         width: 100%;
         height: 50%;
-        border: none;
     }
 
     .dizimos{
-        width: 80%;
+        width: 100%;
         height: 50%;
-        padding-left: 10%;
+    }
+
+    .dizimos img{
+        margin-top: 100px;
+        height: 75px;
+        width: 75px;
     }
 }
 
@@ -499,6 +401,11 @@ h2.palavra_da_semana{
         font-size: 30px;
         transform: translateX(-210px) translateY(-80px);
     }
+
+    h2.palavra_da_semana{
+        font-size: 18px;
+    }
+
 }
 
 @media screen and (max-width: 630px) {
@@ -509,8 +416,12 @@ h2.palavra_da_semana{
         transform: translateX(-140px) translateY(-50px);
     }
 
-    h2 .palavra_da_semana{
+    h2.titulo_palavra_da_semana{
         font-size: 30px;
+    }
+
+    h2 .palavra_da_semana{
+        font-size: 15px;
     }
 
     .domingo, .terca{
@@ -524,30 +435,22 @@ h2.palavra_da_semana{
     }
 
     .cultos_semanais{
-        height: 75vh;
+        height: 90vh;
         display: block;
     }
-
-    .terca{
-        border-left: none;
-        border-top: 3px solid black;
-    }
-
-    .quinta{
-        border-left: none;
-        border-top: 3px solid black;
-    }
     
-    .domingo i{
-        display: none;
+    .cultos_semanais h1, .cultos_semanais h2{
+        font-size: 15px;
     }
 
-    .terca i{
-        display: none;
+    .cultos_semanais img{
+        width: 60px;
     }
+}
 
-    .quinta i{
-        display: none;
+@media screen and (max-width: 540px){
+    h2.titulo_palavra_da_semana{
+        font-size: 25px;
     }
 }
 
@@ -567,17 +470,15 @@ h2.palavra_da_semana{
         font-size: 30px;
     }
 
+    h2.titulo_palavra_da_semana{
+        font-size: 22px;
+    }
+
     h2.palavra_da_semana{
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .cultos_semanais{
         height: 75vh;
-    }
-}
-
-@media screen and (max-width: 300px) {
-    .div_palavra_da_semana h2{
-        font-size: 20px;
     }
 }

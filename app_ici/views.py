@@ -15,7 +15,15 @@ def lista_de_eventos(request):
             seg = imagem.img.url
         if imagem.lugar == "ter":
             ter = imagem.img.url
-    return render(request, "index.html", {"eventos": eventos, "versiculos": versiculo, "proxs_lives": proxs_lives, "pri": pri, "seg": seg, "ter": ter})
+    contexto = {
+        "eventos": eventos,
+        "versiculos": versiculo,
+        "proxs_lives": proxs_lives,
+        "pri": pri,
+        "seg": seg,
+        "ter": ter
+    }
+    return render(request, "index.html", contexto)
 
 
 def eventos_listados(request):

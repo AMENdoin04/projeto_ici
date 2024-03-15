@@ -1,22 +1,134 @@
-img {
-    width: 40%;
+*{
+    margin: 0px;
+    background-color: rgb(214, 214, 214);
 }
 
-body{
+hr{
+    display: none;
+    height: 3px;
+    border: none;
+    background-color: black;
+}
+
+section{
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    width: 100%;
 }
 
+img {
+    height: 50%;
+    width: 260px;
+    border: 2px solid black;
+    border-radius: 20%;
+}
 
-@media screen and (max-width: 730px){
-    body{
+button{
+    width: 50px; height: 50px;
+    border: none;
+    border-radius: 100%;
+    background-color: #04043f;
+    font-size: 25px;
+    color: white;
+    align-items: flex-start;
+    margin-left: 5%;
+    position: fixed;
+}
+
+button:hover{
+    transition: 0.2s;
+    background-color: rgb(14, 14, 138);
+}
+
+button i{
+    background-color: rgb(2, 2, 73);
+    font-size: 30px;
+    color: rgb(214, 214, 214);
+}
+
+button:hover i{
+    background-color: rgb(14, 14, 138);
+    transition: 0.2s;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+h2{
+    padding-left: 30px;
+    font-size: 30px;
+    color: #04043f;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.lado_1_0{
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+.btn_voltar{
+    display: block;
+    width: 50%;
+}
+
+.lado_1_0, .lado_2{
+    width: 50%;
+}
+
+.lado_1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.lado_2{
+    border-left: 4px solid black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (max-width: 900px){
+    section{
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    }
+
+    hr{
+        display: block;
     }
 
     img{
+        height: 300px;
+    }
+
+    .lado_1_0, .lado_2{
         width: 100%;
+    }
+    
+    .lado_2{
+        border-left: none;
+        margin-bottom: 60px;
+    }
+
+    .btn_voltar{
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h2{
+        font-size: 25px;
     }
 }
