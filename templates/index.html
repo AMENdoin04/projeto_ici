@@ -9,15 +9,12 @@
     <link rel="stylesheet" href="{%static 'css/index.css' %}">
     <link rel="stylesheet" href="{%static 'css/index(1).css' %}">
     {% for prox_live in proxs_lives %}
-        <script src="{%static 'js/relogio.js' %}" defer data-live="{{prox_live.proxs_lives}}"></script>
+        <script src="{%static 'js/index.js' %}" defer data-live="{{prox_live.proxs_lives}}"></script>
     {% endfor %}
-    <script src="{%static 'js/animação.js' %}" defer data-live="{{prox_live.proxs_lives}}"></script>
-    <script src="{%static 'js/slide.js' %}" defer data-live="{{prox_live.proxs_lives}}"></script>
     <script src="https://kit.fontawesome.com/3f61646e14.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@600&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -42,10 +39,10 @@
             </button>
 
             <div class="sociais_nav">
-                <a href="https://www.instagram.com/igrejaici/" target="_blank"><button class=" activate_rigth"><i class="fa-brands fa-instagram"></i></button></a>
-                <a href="https://www.facebook.com/icp.itanhaem" target="_blank"><button class=" activate_rigth"><i class="fa-brands fa-square-facebook"></i></button></a>
-                <a href="https://www.youtube.com/@igrejaici" target="_blank"><button class=" activate_rigth"><i class="fa-brands fa-youtube"></i></button></a>
-                <a href="https://www.tiktok.com/@igrejaici?_t=8gDXbjto14A&_r=1" target="_blank"><button class=" activate_rigth"><i class="fa-brands fa-tiktok"></i></button></a>
+                <a href="https://www.instagram.com/igrejaici/" target="_blank"><button class="activate"><i class="fa-brands fa-instagram"></i></button></a>
+                <a href="https://www.facebook.com/icp.itanhaem" target="_blank"><button class="activate"><i class="fa-brands fa-square-facebook"></i></button></a>
+                <a href="https://www.youtube.com/@igrejaici" target="_blank"><button class="activate"><i class="fa-brands fa-youtube"></i></button></a>
+                <a href="https://www.tiktok.com/@igrejaici?_t=8gDXbjto14A&_r=1" target="_blank"><button class=" activate"><i class="fa-brands fa-tiktok"></i></button></a>
             </div>
         </div>
     </header>
@@ -85,7 +82,7 @@
         </div>
     </section>
 
-    <div class="menu_nav_mobile activate" id="menu_nav_mobile">
+    <div class="menu_nav_mobile" id="menu_nav_mobile">
         <nav>
             <a href="#palavra_da_semana">palavra_da_semana</a>
             <a href="#dizimo">Dizimos</a>
@@ -111,11 +108,11 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="dizimos activate_rigth" id="dizimo">
+        <div class="dizimos activate" id="dizimo">
             <img src="../static/img/coraçãozinho.png">
-            <h2 class="text_dizimos">CLIQUE AQUI PARA</h2>
+            <h2 >CLIQUE AQUI PARA</h2>
             <form action="{% url 'dizimos_page' %}">
-                <button class="btn_dizimos">DÍZIMOS E OFERTAS</button>
+                <button class="btn_dizimos">DÍZIMAR E OFERTAR</button>
             </form>
         </div>
     </section>
@@ -185,7 +182,7 @@
             <h1>LOCALIZAÇÃO</h1>
             <div class="coluna_local">
                 <img src="../static/img/CULTOSANTACEIA_2.jpg" width="230">
-                <button>Clique aqui para localização</button>
+                <a href="https://www.google.com.br/maps/place/Igreja+de+Cristo+em+Itanhaem/@-24.1613162,-46.7577691,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce2b3c12ca5997:0x7867cec4a66345fd!8m2!3d-24.1613211!4d-46.7551942!16s%2Fg%2F11h3k5b6cs?entry=ttu" target="_blank"><button>Clique aqui para localização</button></a>
                 <h1>Rua Cardeal Mota, 573, Suarão - Itanhém/SP</h1>
             </div>
         </div>

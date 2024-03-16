@@ -9,6 +9,7 @@ body{
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    font-weight: 500;
 }
 
 .conteiner_nav{
@@ -200,6 +201,12 @@ section.slide{
     border-radius: 20px;
     border: none;
     transform: translateX(-160%) translateY(-200%);
+    transition: 0.5s;
+    font-weight: 900;
+}
+
+.btn_eventos:hover{
+    transform: translateX(-150%) translateY(-200%);
 }
 
 .space_carosel{
@@ -215,7 +222,7 @@ section.slide{
 .div_palavra_da_semana{
     width: 65%; height: 80vh;
     border-right: 5px solid black;
-    padding: 90px;
+    padding: 9%;
 }
 
 .limite_palavra{
@@ -227,6 +234,7 @@ h2.titulo_palavra_da_semana{
     font-size: 35px;
     margin-top: 40px;
     text-align: justify;
+    font-weight: 900;
 }
 
 h2.palavra_da_semana{
@@ -243,6 +251,7 @@ h2.palavra_da_semana{
     text-align: center;
     color: black;
     font-size: 25px;
+    font-weight: 900;
 }
 
 .dizimos img{
@@ -261,6 +270,11 @@ h2.palavra_da_semana{
     font-family: 'Poppins', sans-serif;
     margin-bottom: 150px;
     font-weight: 900;
+    transition: 0.5s;
+}
+
+.btn_dizimos:hover{
+    transform: translateX(10px);
 }
 
 @keyframes ScrollReveal {
@@ -401,6 +415,10 @@ h2.palavra_da_semana{
         font-size: 30px;
         transform: translateX(-210px) translateY(-80px);
     }
+    
+    .btn_eventos:hover{
+        transform: translateX(-190px) translateY(-80px);
+    }
 
     h2.palavra_da_semana{
         font-size: 18px;
@@ -414,6 +432,10 @@ h2.palavra_da_semana{
         width: 150px; height: 35px;
         font-size: 20px;
         transform: translateX(-140px) translateY(-50px);
+    }
+
+    .btn_eventos:hover{
+        transform: translateX(-120px) translateY(-50px);
     }
 
     h2.titulo_palavra_da_semana{
@@ -460,6 +482,11 @@ h2.palavra_da_semana{
         width: 90px; height: 25px;
         font-size: 10px;
         transform: translateX(-90px) translateY(-40px);
+    }
+
+    
+    .btn_eventos:hover{
+        transform: translateX(-70px) translateY(-40px);
     }
 
     .fa-solid{
